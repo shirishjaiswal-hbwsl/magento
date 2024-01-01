@@ -86,6 +86,7 @@
         "magento-force": "override"
     },
     "replace": {
-        "magento/module-two-factor-auth" : "*"
+        "magento/module-two-factor-auth" : "*",
+        "yotpo/magento2-module-yotpo-reviews" : "*"
     }
 }
