@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+   <router id="standard">
+       <route id="test_route" frontName="name">
+       <!-- id is used for layouts -->
+       <!-- frontName = Endpoint on frontend -->
+           <module name="Shirish_TestModule"/>
+       </route>
+   </router>
+</config>
