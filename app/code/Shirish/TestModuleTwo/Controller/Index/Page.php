@@ -1,9 +1,10 @@
-<?Php
+<?php
 
+namespace Shirish\TestModuleTwo\Controller\Index;
 use Magento\Framework\App\ActionInterface;
 use Magento\Framework\View\Result\PageFactory;
 
-class Index implements ActionInterface {
+class Page implements ActionInterface {
 
     protected $resultPageFactory;
     public function __construct(PageFactory $resultPageFactory)
@@ -13,7 +14,8 @@ class Index implements ActionInterface {
     public function execute()
     {
         $page = $this->resultPageFactory->create();
-        $page = $page->getConfig()->getTitle()->set("Layout");
+        // $page->getConfig()->getTitle()->set("Layout");
+
         return $page;
     }
 }

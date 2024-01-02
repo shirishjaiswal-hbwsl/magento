@@ -6,7 +6,6 @@ use Magento\Framework\View\Result\PageFactory;
 
 class Page implements ActionInterface {
 
-    protected $result;
     protected $pageFactory;
     public function __construct(PageFactory $pageFactory) 
     {
