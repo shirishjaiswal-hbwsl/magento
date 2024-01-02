@@ -1,7 +1,10 @@
 <?php /**@var \Shirish\TestModuleTwo\Block\Layout\Index $block */ ?>
-
+<!-- Adding subtitle from above path-->
 <h2><?= $block->getSubtitle() ?></h2>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, repellendus? Laudantium hic, veniam repellendus
     nam fugit et nulla porro quidem optio iste iure explicabo perspiciatis aperiam dolores quas quibusdam molestiae
     vitae aspernatur eveniet placeat. Iusto iure explicabo corrupti obcaecati nam.</p>
+
+
+<?= $block->getChildHtml("layout_note") ?>

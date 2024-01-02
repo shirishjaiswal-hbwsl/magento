@@ -24,7 +24,10 @@
             <block name="layout_example"
                 class="Shirish\TestModuleTwo\Block\Layout\Index"
                 template="Shirish_TestModuleTwo::content.phtml"
-            />
+            >
+                <block name="layout_note" class="Shirish\TestModuleTwo\Block\Layout\Note"
+                    template="Shirish_TestModuleTwo::note.phtml" />
+            </block>
         </referenceContainer>
     </body>
 </page>
