@@ -6,4 +6,14 @@
             This is Head Layout
         </title>
     </head>
+    <body>
+        <referenceContainer name="content">
+            <!-- class path should have facet pattern i.e., first letter of each dir should be
+            capital -->
+            <block name="layout_example"
+                class="Magento\Framework\View\Element\Template"
+                template="Shirish_TestModuleTwo::content.phtml"
+            />
+        </referenceContainer>
+    </body>
 </page>
