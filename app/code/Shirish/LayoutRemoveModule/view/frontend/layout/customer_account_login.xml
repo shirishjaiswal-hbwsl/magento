@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
-    <referenceBlock name="customer.new" remove="true" />
+    <!-- <referenceBlock name="customer.new" remove="true" /> -->
+    <referenceBlock name="customer.new" display="false" />
+    <!-- object removed from layout object when used remove
+        used display does not remove just hides and nor rendered
+    -->
 </page>
