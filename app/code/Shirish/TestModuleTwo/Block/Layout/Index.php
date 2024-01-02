@@ -15,4 +15,10 @@ class Index extends Template {
 
         return $this;
     }
+
+    //Setting the subtitle dynamically 
+    public function getSubtitle() : String 
+    {
+        return "Learn Magento 2";
+    }
 }
