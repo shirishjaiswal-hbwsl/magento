@@ -14,8 +14,9 @@ class Page implements ActionInterface {
     public function execute()
     {
         $page = $this->resultPageFactory->create();
-        // $page->getConfig()->getTitle()->set("Layout");
-
+        // overriding the title placed inside the layout dir file
+        $page->getConfig()->getTitle()->set("Page");
+        $page->getLayout()->getBlock("page.main.title")->setPagetitle("Developer");
         return $page;
     }
 }

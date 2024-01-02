@@ -13,7 +13,7 @@
                 <argument name="page_title" xsi:type="string">Something</argument>
             </action>
         </referenceBlock>
-        <referenceBlock name="page.main.title" remove="true" />
+        <!-- <referenceBlock name="page.main.title" remove="true" /> -->
         <!--this
         referenceContainer name attribute is refering the name to the container present in the
         Magento\Framework\View\Element\Template"  -->
