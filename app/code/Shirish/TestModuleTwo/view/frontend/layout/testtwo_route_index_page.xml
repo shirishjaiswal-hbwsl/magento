@@ -7,11 +7,16 @@
         </title>
     </head>
     <body>
+
         <referenceBlock name="page.main.title">
             <action method="setPageTitle">
                 <argument name="page_title" xsi:type="string">Something</argument>
             </action>
         </referenceBlock>
+        <referenceBlock name="page.main.title" remove="true" />
+        <!--this
+        referenceContainer name attribute is refering the name to the container present in the
+        Magento\Framework\View\Element\Template"  -->
         <referenceContainer name="content">
             <!-- class path should have facet pattern i.e., first letter of each dir should be
             capital -->
