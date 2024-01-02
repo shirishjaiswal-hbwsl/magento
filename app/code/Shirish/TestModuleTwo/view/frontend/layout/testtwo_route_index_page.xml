@@ -7,6 +7,11 @@
         </title>
     </head>
     <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument name="page_title" xsi:type="string">Something</argument>
+            </action>
+        </referenceBlock>
         <referenceContainer name="content">
             <!-- class path should have facet pattern i.e., first letter of each dir should be
             capital -->
