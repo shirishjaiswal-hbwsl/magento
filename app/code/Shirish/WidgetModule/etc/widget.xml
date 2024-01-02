@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="widget_example" class="Shirish\WidgetModule\Block\Widget\Title">
+        <label>My First Widget</label>
+        <description>This is a great widget</description>
+        <parameters>
+            <parameter name="title" xsi:type="text">
+                <label>Widget Title</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

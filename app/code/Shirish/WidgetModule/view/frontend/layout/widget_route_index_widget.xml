@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+  <head>
+    <title>Widget Example</title>
+  </head>
+
+  <body>
+    <referenceContainer name="content">
+      <block name="widget_example" class="Magento\Cms\Block\Block">
+        <arguments>
+          <argument name="block_id" xsi:type="string">widget_example_block</argument>
+        </arguments>
+      </block>
+
+    </referenceContainer>
+  </body>
+</page>

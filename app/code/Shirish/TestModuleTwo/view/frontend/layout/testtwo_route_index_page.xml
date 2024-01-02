@@ -27,7 +27,14 @@
             >
                 <block name="layout_note" class="Shirish\TestModuleTwo\Block\Layout\Note"
                     template="Shirish_TestModuleTwo::note.phtml" />
+
             </block>
+            <block name="cms_block_element" class="Magento\Cms\Block\Block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">cms_block_element</argument>
+                </arguments>
+            </block>
+
         </referenceContainer>
     </body>
 </page>
