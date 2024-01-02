@@ -7,12 +7,12 @@
         </title>
     </head>
     <body>
-
+        <!-- 
         <referenceBlock name="page.main.title">
             <action method="setPageTitle">
                 <argument name="page_title" xsi:type="string">Something</argument>
             </action>
-        </referenceBlock>
+        </referenceBlock> -->
         <!-- <referenceBlock name="page.main.title" remove="true" /> -->
         <!--this
         referenceContainer name attribute is refering the name to the container present in the
