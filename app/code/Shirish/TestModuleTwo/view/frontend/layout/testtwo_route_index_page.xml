@@ -20,8 +20,9 @@
         <referenceContainer name="content">
             <!-- class path should have facet pattern i.e., first letter of each dir should be
             capital -->
+            <!-- Now we are using the custom block which we have created rather then we generic one -->
             <block name="layout_example"
-                class="Magento\Framework\View\Element\Template"
+                class="Shirish\TestModuleTwo\Block\Layout\Index"
                 template="Shirish_TestModuleTwo::content.phtml"
             />
         </referenceContainer>
