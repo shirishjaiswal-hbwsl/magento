@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <head>
+        <css src="Shirish_HeadCssJs::css/contact.css" />
+        <script src="Shirish_HeadCssJs::js/contact.js" />
+    </head>
+
+</page>
