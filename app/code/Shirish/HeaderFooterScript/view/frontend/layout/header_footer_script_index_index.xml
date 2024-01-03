@@ -7,5 +7,15 @@
                 template="Shirish_HeaderFooterScript::head_additional/header_footer_script.phtml"
                 class="Magento\Framework\View\Element\Template" />
         </referenceBlock>
+        <referenceBlock name="after.body.start">
+            <block name="after_body_start_header_footer_script"
+                template="Shirish_HeaderFooterScript::body_start/header_footer_script.phtml"
+                class="Magento\Framework\View\Element\Template" />
+        </referenceBlock>
+        <referenceBlock name="before.body.end">
+            <block name="before_body_end_header_footer_script"
+                template="Shirish_HeaderFooterScript::body_end/header_footer_script.phtml"
+                class="Magento\Framework\View\Element\Template" />
+        </referenceBlock>
     </body>
 </page>
