@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="dependency_example"
+                class="Shirish\DependencyInjectionModule\Block\Example"
+                template="Shirish_DependencyInjectionModule::dependency_example.phtml" />
+        </referenceContainer>
+    </body>
+</page>

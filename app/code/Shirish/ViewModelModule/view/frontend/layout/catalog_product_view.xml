@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <body>
+        <referenceContainer name="product.info.main">
+            <block name="delivery_message"
+                class="Magento\Framework\View\Element\Template"
+                template="Shirish_ViewModelModule::delivery_message.phtml"
+                before="product.info.price"
+            >
+                <arguments>
+                    <argument name="view_model" xsi:type="object">
+                        Shirish\ViewModelModule\ViewModel\DeliveryMessage
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
