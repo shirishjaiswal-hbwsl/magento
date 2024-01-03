@@ -4,7 +4,7 @@
     <type name="Shirish\DependencyInjectionModule\Model\Main">
         <arguments>
             <argument name="data" xsi:type="array">
-                <item name="id" xsi:type="string">Class Main from di.xml</item>
+                <item name="id" xsi:type="string">Class Main from di xml</item>
             </argument>
         </arguments>
     </type>
