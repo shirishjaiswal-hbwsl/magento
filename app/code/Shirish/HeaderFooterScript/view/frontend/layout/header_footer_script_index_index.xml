@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <body>
+        <referenceBlock name="head.additional">
+            <block name="header_footer_script"
+                template="Shirish_HeaderFooterScript::head_additional/header_footer_script.phtml"
+                class="Magento\Framework\View\Element\Template" />
+        </referenceBlock>
+    </body>
+</page>
