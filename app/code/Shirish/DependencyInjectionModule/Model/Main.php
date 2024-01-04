@@ -2,6 +2,8 @@
 
 namespace Shirish\DependencyInjectionModule\Model;
 
+use Shirish\DependencyInjectionModule\Model\NonInjectableInterfaceFactory;
+
 class Main {
 
 
@@ -15,13 +17,15 @@ class Main {
     protected Injectable $injectable;
 
     // Here we have injected the NonInjectableFactory which will create NonInjectable object
-    protected NonInjectableFactory $nonInjectableFactory;
+    protected NonInjectableInterfaceFactory $nonInjectableInterfaceFactory;
 
     // used InjectableInterface to get Injectable Object but to let know magento to give us the Injectable object after calling InjectableInterface we need to specify it inside the di.xml
-    public function __construct(InjectableInterface $injectable, NonInjectableFactory $nonInjectableFactory, array $data=[])
+
+    // NonInjectableInterfaceFactory will return the NonInjectableInterfaceFactory
+    public function __construct(InjectableInterface $injectable, NonInjectableInterfaceFactory $nonInjectableInterfaceFactory, array $data=[])
     {
         $this->injectable = $injectable;
-        $this->nonInjectableFactory = $nonInjectableFactory;
+        $this->nonInjectableInterfaceFactory = $nonInjectableInterfaceFactory;
         $this->data = $data;
     }
     
@@ -39,7 +43,7 @@ class Main {
     public function getNonInjectable () : NonInjectable
     {
         // this will  create an object of NonInjectable object and return it
-        return $this->nonInjectableFactory->create();
+        return $this->nonInjectableInterfaceFactory->create();
     }
 
     // Difference between Injectable and NonInjectable classes

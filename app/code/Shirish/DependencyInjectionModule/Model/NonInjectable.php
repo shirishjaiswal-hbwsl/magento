@@ -2,10 +2,10 @@
 
 namespace Shirish\DependencyInjectionModule\Model;
 
-class NonInjectable {
+class NonInjectable implements NonInjectableInterface{
 
     public function getId(): string
     {
-        return "NonInjectable Class Id";
+        return "NonInjectable Class Id : called via NonInjectableInterfaceFactory";
     }
 }
