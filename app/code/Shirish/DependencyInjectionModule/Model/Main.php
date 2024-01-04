@@ -17,7 +17,8 @@ class Main {
     // Here we have injected the NonInjectableFactory which will create NonInjectable object
     protected NonInjectableFactory $nonInjectableFactory;
 
-    public function __construct(Injectable $injectable, NonInjectableFactory $nonInjectableFactory, array $data=[])
+    // used InjectableInterface to get Injectable Object but to let know magento to give us the Injectable object after calling InjectableInterface we need to specify it inside the di.xml
+    public function __construct(InjectableInterface $injectable, NonInjectableFactory $nonInjectableFactory, array $data=[])
     {
         $this->injectable = $injectable;
         $this->nonInjectableFactory = $nonInjectableFactory;

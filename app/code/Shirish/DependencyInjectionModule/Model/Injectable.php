@@ -2,9 +2,11 @@
 
 namespace Shirish\DependencyInjectionModule\Model;
 
-class Injectable {
+// implementing InjectableInterface
+class Injectable implements InjectableInterface {
 
+    // modifying the content to just clarify that the InjectableInterface is working 
     public function getId() :string {
-        return "This is id of Injectable Class";
+        return "This is id of Injectable Class : by using InjectableInterface";
     }
 }
