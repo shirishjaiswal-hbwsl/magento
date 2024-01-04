@@ -9,8 +9,13 @@
     <preference for="Shirish\DependencyInjectionModule\Model\NonInjectableInterface"
         type="Shirish\DependencyInjectionModule\Model\NonInjectable" />
 
+    <!--But
+    we may have multiple classes extending the Abstract class and whenever we inject this
+    AbstractUtil object we will get the specified object which is not the appropriate way  -->
     <preference for="Shirish\DependencyInjectionModule\Model\AbstractUtil"
         type="Shirish\DependencyInjectionModule\Model\Util" />
+
+
     <type name="Shirish\DependencyInjectionModule\Model\Main">
         <arguments>
             <argument name="data" xsi:type="array">
