@@ -22,10 +22,19 @@ class Main {
     // used InjectableInterface to get Injectable Object but to let know magento to give us the Injectable object after calling InjectableInterface we need to specify it inside the di.xml
 
     // NonInjectableInterfaceFactory will return the NonInjectableInterfaceFactory
-    public function __construct(InjectableInterface $injectable, NonInjectableInterfaceFactory $nonInjectableInterfaceFactory, array $data=[])
+
+    
+    protected Util $util;
+
+    // injecting AbstractUtil to get the object of Util which is configurd inside the di.xml
+    public function __construct(InjectableInterface $injectable, 
+                                NonInjectableInterfaceFactory $nonInjectableInterfaceFactory, 
+                                AbstractUtil $util,
+                                array $data=[])
     {
         $this->injectable = $injectable;
         $this->nonInjectableInterfaceFactory = $nonInjectableInterfaceFactory;
+        $this->util = $util;
         $this->data = $data;
     }
     
@@ -49,4 +58,9 @@ class Main {
     // Difference between Injectable and NonInjectable classes
     // Injectable class will be called directly by class name and will give you every time the same instance whenever you call it
     // NonInjectable class will be called by using its Factory method and will give you new instance every time we call for it   
+
+    public function getAbstractUtil () : AbstractUtil
+    {
+        return $this->util;
+    }
 }

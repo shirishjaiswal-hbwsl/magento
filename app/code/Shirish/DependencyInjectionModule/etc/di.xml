@@ -9,6 +9,8 @@
     <preference for="Shirish\DependencyInjectionModule\Model\NonInjectableInterface"
         type="Shirish\DependencyInjectionModule\Model\NonInjectable" />
 
+    <preference for="Shirish\DependencyInjectionModule\Model\AbstractUtil"
+        type="Shirish\DependencyInjectionModule\Model\Util" />
     <type name="Shirish\DependencyInjectionModule\Model\Main">
         <arguments>
             <argument name="data" xsi:type="array">
