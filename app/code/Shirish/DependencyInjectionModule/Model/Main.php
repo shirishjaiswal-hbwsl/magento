@@ -40,4 +40,8 @@ class Main {
         // this will  create an object of NonInjectable object and return it
         return $this->nonInjectableFactory->create();
     }
+
+    // Difference between Injectable and NonInjectable classes
+    // Injectable class will be called directly by class name and will give you every time the same instance whenever you call it
+    // NonInjectable class will be called by using its Factory method and will give you new instance every time we call for it   
 }
