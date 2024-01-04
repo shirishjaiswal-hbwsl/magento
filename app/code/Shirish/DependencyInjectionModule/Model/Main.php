@@ -27,14 +27,19 @@ class Main {
     protected Util $util;
 
     // injecting AbstractUtil to get the object of Util which is configurd inside the di.xml
+
+    protected HeavyOperation $heavyOperation;
+    
     public function __construct(InjectableInterface $injectable, 
                                 NonInjectableInterfaceFactory $nonInjectableInterfaceFactory, 
                                 AbstractUtil $util,
+                                HeavyOperation $heavyOperation,
                                 array $data=[])
     {
         $this->injectable = $injectable;
         $this->nonInjectableInterfaceFactory = $nonInjectableInterfaceFactory;
         $this->util = $util;
+        $this->heavyOperation = $heavyOperation;
         $this->data = $data;
     }
     
@@ -62,5 +67,10 @@ class Main {
     public function getAbstractUtil () : AbstractUtil
     {
         return $this->util;
+    }
+
+    public function getHeavyOperation () : HeavyOperation
+    {
+        return $this->heavyOperation;
     }
 }
