@@ -6,6 +6,16 @@
     <?= $block->getViewModel()->getSupply()->getSupplier()->getCode() ?>
 </p>
 
+<!-- If we make a call from demand then we will be getting the same object as it is already created in supply -->
 <p>
     <?= $block->getViewModel()->getDemand()->getSupplier()->getCode() ?>
+</p>
+
+<p>
+    <?= $block->getViewModel()->getSupply()->getItem()->getCode() ?>
+</p>
+
+<!-- If we call from demand then we will not recieve any thing (error if code is not inatilizd or Typed error) as before as every time new object is getting created-->
+<p>
+    <?= $block->getViewModel()->getDemand()->getItem()->getCode() ?>
 </p>
