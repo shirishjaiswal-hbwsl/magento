@@ -11,10 +11,13 @@ class Main {
     // but the data in $data will come from the di.xml file 
 
     // To store the data coming in $data we will store it in data
-    protected $data;
+    protected array $data;
 
-    public function __construct(array $data=[])
+    protected Injectable $injectable;
+
+    public function __construct(Injectable $injectable, array $data=[])
     {
+        $this->injectable = $injectable;
         $this->data = $data;
     }
     
@@ -22,5 +25,10 @@ class Main {
     {
         // This id will come from di.xml
         return $this->data["id"];
+    }
+
+    public function getInjectable () :Injectable
+    {
+        return $this->injectable;
     }
 }
