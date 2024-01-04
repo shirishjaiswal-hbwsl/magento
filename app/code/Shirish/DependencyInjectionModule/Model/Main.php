@@ -23,7 +23,7 @@ class Main {
 
     // NonInjectableInterfaceFactory will return the NonInjectableInterfaceFactory
 
-    
+    // AbstractUtil $util,
     protected Util $util;
 
     // injecting AbstractUtil to get the object of Util which is configurd inside the di.xml
