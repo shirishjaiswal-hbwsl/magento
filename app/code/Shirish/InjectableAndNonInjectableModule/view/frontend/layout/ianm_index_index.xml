@@ -4,8 +4,14 @@
     <body>
         <referenceContainer name="content">
             <block name="injectables"
-                class="Shirish\InjectableAndNonInjectableModule\Block\Example"
-                template="Shirish_InjectableAndNonInjectableModule::injectables.phtml" />
+                class="Magento\Framework\View\Element\Template"
+                template="Shirish_InjectableAndNonInjectableModule::injectables.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">
+                        Shirish\InjectableAndNonInjectableModule\ViewModel\Example</argument>
+                </arguments>
+            </block>
+
         </referenceContainer>
     </body>
 </page>

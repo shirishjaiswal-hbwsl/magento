@@ -1,3 +1,11 @@
-<?php /** @var \Shirish\InjectableAndNonInjectableModule\View\Element\Templates $block */?>
+<?php /** @var \Magento\Framework\View\Element\Template $block */?>
 
 <h2>Example Dumb</h2>
+
+<p>
+    <?= $block->getViewModel()->getSupply()->getSupplier()->getCode() ?>
+</p>
+
+<p>
+    <?= $block->getViewModel()->getDemand()->getSupplier()->getCode() ?>
+</p>
