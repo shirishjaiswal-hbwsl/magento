@@ -2,7 +2,6 @@
 
 namespace Shirish\DependencyInjectionModule\Model;
 
-
 class Main {
 
 
@@ -15,9 +14,13 @@ class Main {
 
     protected Injectable $injectable;
 
-    public function __construct(Injectable $injectable, array $data=[])
+    // Here we have injected the NonInjectableFactory which will create NonInjectable object
+    protected NonInjectableFactory $nonInjectableFactory;
+
+    public function __construct(Injectable $injectable, NonInjectableFactory $nonInjectableFactory, array $data=[])
     {
         $this->injectable = $injectable;
+        $this->nonInjectableFactory = $nonInjectableFactory;
         $this->data = $data;
     }
     
@@ -30,5 +33,11 @@ class Main {
     public function getInjectable () :Injectable
     {
         return $this->injectable;
+    }
+
+    public function getNonInjectable () : NonInjectable
+    {
+        // this will  create an object of NonInjectable object and return it
+        return $this->nonInjectableFactory->create();
     }
 }
