@@ -3,6 +3,7 @@
 namespace Shirish\DependencyInjectionModule\Model;
 
 use Shirish\DependencyInjectionModule\Model\NonInjectableInterfaceFactory;
+use Shirish\DependencyInjectionModule\Model\VirtualType\DefaultName;
 
 class Main {
 
@@ -30,16 +31,19 @@ class Main {
 
     protected HeavyOperation $heavyOperation;
     
+    protected DefaultName $defaultName;
     public function __construct(InjectableInterface $injectable, 
                                 NonInjectableInterfaceFactory $nonInjectableInterfaceFactory, 
                                 AbstractUtil $util,
                                 HeavyOperation $heavyOperation,
+                                DefaultName $defaultName,
                                 array $data=[])
     {
         $this->injectable = $injectable;
         $this->nonInjectableInterfaceFactory = $nonInjectableInterfaceFactory;
         $this->util = $util;
         $this->heavyOperation = $heavyOperation;
+        $this->defaultName = $defaultName;
         $this->data = $data;
     }
     
@@ -72,5 +76,10 @@ class Main {
     public function getHeavyOperation () : HeavyOperation
     {
         return $this->heavyOperation;
+    }
+
+    public function getDefaultName () :DefaultName 
+    {
+        return $this->defaultName;
     }
 }

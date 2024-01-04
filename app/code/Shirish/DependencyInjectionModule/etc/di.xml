@@ -24,6 +24,15 @@
             <argument name="data" xsi:type="array">
                 <item name="id" xsi:type="string">"Class Main Id from di.xml"</item>
             </argument>
+            <argument name="defaultName" xsi:type="object">UppercaseName</argument>
         </arguments>
     </type>
+    <virtualType name="UppercaseName"
+        type="Shirish\DependencyInjectionModule\Model\VirtualType\DefaultName">
+        <arguments>
+            <argument name="name" xsi:type="object">
+                Shirish\DependencyInjectionModule\Model\VirtualType\UppercaseName</argument>
+        </arguments>
+
+    </virtualType>
 </config>
