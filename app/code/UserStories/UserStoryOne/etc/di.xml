@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="\Magento\Catalog\Api\Data\CategoryInterface"
+        type="UserStories\UserStoryOne\ViewModel\IModOne" />
+
+    <preference for="UserStories\UserStoryOne\ViewModel\IModOne"
+        type="UserStories\UserStoryOne\ViewModel\ModOne" />
+
+    <type name="UserStories\UserStoryOne\ViewModel\Test">
+        <arguments>
+            <argument name="arrData" xsi:type="array">
+                <item name="keyOne" xsi:type="string">Array Data One</item>
+                <item name="keyTwo" xsi:type="string">Array Data Two</item>
+                <item name="keyThree" xsi:type="string">Array Data Three</item>
+            </argument>
+            <argument name="strData" xsi:type="string">String Data</argument>
+        </arguments>
+    </type>
+</config>
