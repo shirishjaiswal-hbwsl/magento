@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="usoa_id" frontName="usoa_path">
+            <module name="UserStories_UserStoryOneA" />
+        </route>
+    </router>
+</config>
