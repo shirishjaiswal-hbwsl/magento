@@ -6,4 +6,10 @@
             type="UserStories\UserStoryTwo\Plugin\POnSale"
             sortOrder="1" />
     </type>
+
+    <type name="Magento\Theme\Block\Html\Header">
+        <plugin name="welcome_plugin"
+            type="UserStories\UserStoryTwo\Plugin\PDefaultMessage"
+            sortOrder="1" />
+    </type>
 </config>
