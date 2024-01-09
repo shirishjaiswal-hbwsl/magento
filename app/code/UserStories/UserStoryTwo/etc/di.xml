@@ -18,4 +18,10 @@
             type="UserStories\UserStoryTwo\Plugin\PCopyright"
             sortOrder="1" />
     </type>
+
+    <type name="Magento\Theme\Block\Html\Breadcrumbs">
+        <plugin name="breadcrumbs_plugin"
+            type="UserStories\UserStoryTwo\Plugin\PBreadcrumb"
+            sortOrder="1" />
+    </type>
 </config>
