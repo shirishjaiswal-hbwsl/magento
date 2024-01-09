@@ -12,4 +12,10 @@
             type="UserStories\UserStoryTwo\Plugin\PDefaultMessage"
             sortOrder="1" />
     </type>
+
+    <type name="Magento\Theme\Block\Html\Footer">
+        <plugin name="copyright_plugin"
+            type="UserStories\UserStoryTwo\Plugin\PCopyright"
+            sortOrder="1" />
+    </type>
 </config>
