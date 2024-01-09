@@ -19,8 +19,7 @@ class EventObserver implements ObserverInterface
     public function execute(Observer $observer) {
         // var_dump($observer->getEvent()->getData('response'));
         $response = $observer->getEvent()->getData('response');
-        // $layoutHtml = $response->getOutput();
         $body = $response->getBody();
-        $this->logger->info($body);
+        // $this->logger->info($body);
     }
 }
