@@ -18,9 +18,8 @@ class Index implements ActionInterface
     public function execute()
     {
         $page = $this->pageFactory->create();
-
+        $page->getConfig()->setPageLayout('2columns-left');
         $page->getconfig()->getTitle()->set("User Story Seven");
-
         return $page;
     }
 }
