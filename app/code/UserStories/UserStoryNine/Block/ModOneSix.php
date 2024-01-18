@@ -21,6 +21,13 @@ class ModOneSix extends Template
 
     public function getColorPicker()
     {
-        return $this->helper->getGeneralConfig('color_picker');
+        if ($this->isEnableColorPicker() == true) {
+            return $this->helper->getColor('color_picker');
+        }
+    }
+
+    public function isEnableColorPicker()
+    {
+        return $this->helper->isEnableColorPicker('enable_color_picker');
     }
 }

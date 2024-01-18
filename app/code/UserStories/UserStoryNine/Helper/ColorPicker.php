@@ -17,8 +17,13 @@ class ColorPicker extends AbstractHelper
         );
     }
 
-    public function getGeneralConfig($code, $storeId = null)
+    public function getColor($code, $storeId = null)
     {
         return $this->getConfigValue('colorpicker/color_picker_configuration/' . $code, $storeId);
+    }
+
+    public function isEnableColorPicker($code, $storeId = null)
+    {
+        return $this->getConfigValue('colorpicker/enable_color_picker/' . $code, $storeId);
     }
 }

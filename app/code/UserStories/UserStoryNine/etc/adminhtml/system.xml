@@ -37,6 +37,17 @@
             <!-- Assign section to tab -->
             <tab>mod9</tab>
             <resource>Mod9_Colorpicker::configuration</resource>
+            <group id="enable_color_picker" translate="label" type="text" sortOrder="5"
+                showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Enable Color Picker</label>
+                <!-- create text type field -->
+                <field id="enable_color_picker" translate="label" type="select" sortOrder="10"
+                    showInDefault="1"
+                    showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>UserStories\UserStoryNine\Model\Config\Source\YesNo</source_model>
+                </field>
+            </group>
             <group id="color_picker_configuration" translate="label" type="text" sortOrder="5"
                 showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Color Picker</label>
@@ -44,7 +55,7 @@
                 <field id="color_picker" translate="label" type="select" sortOrder="10"
                     showInDefault="1"
                     showInWebsite="1" showInStore="1">
-                    <label>Enable</label>
+                    <label>Select Color</label>
                     <source_model>UserStories\UserStoryNine\Model\Config\Source\ColorPicker</source_model>
                 </field>
             </group>
