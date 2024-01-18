@@ -5,10 +5,9 @@ namespace UserStories\UserStoryNine\Helper;
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Store\Model\ScopeInterface;
 
-class Data extends AbstractHelper
+// User Story One Six
+class ColorPicker extends AbstractHelper
 {
-    // const XML_PATH_MYMODULE = 'user_story_9/';
-
     public function getConfigValue($field, $storeId = null)
     {
         return $this->scopeConfig->getValue(
@@ -20,7 +19,6 @@ class Data extends AbstractHelper
 
     public function getGeneralConfig($code, $storeId = null)
     {
-        // return $this->getConfigValue(self::XML_PATH_MYMODULE . 'general/' . $code, $storeId);
-        return $this->getConfigValue('generalsection/custom_configuration/' . $code, $storeId);
+        return $this->getConfigValue('colorpicker/color_picker_configuration/' . $code, $storeId);
     }
 }

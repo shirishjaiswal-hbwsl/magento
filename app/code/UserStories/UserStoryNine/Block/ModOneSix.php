@@ -4,28 +4,23 @@ namespace UserStories\UserStoryNine\Block;
 
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
-use UserStories\UserStoryNine\Helper\Data;
-
-class ModNine extends Template
+use UserStories\UserStoryNine\Helper\ColorPicker;
+// User Story One Six
+class ModOneSix extends Template
 {
     protected $helper;
 
     public function __construct(
         Context $context,
-        Data $helper,
+        ColorPicker $helper,
         array $data = []
     ) {
         parent::__construct($context, $data);
         $this->helper = $helper;
     }
 
-    public function getEnable()
+    public function getColorPicker()
     {
-        return $this->helper->getGeneralConfig('enable');
-    }
-
-    public function getTextToDisplay()
-    {
-        return $this->helper->getGeneralConfig('text_to_display');
+        return $this->helper->getGeneralConfig('color_picker');
     }
 }

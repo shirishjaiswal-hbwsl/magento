@@ -6,7 +6,7 @@
         <tab id="mod9" translate="label" sortOrder="10">
             <label>Mod9</label>
         </tab>
-        <!-- to create section -->
+        <!-- to create section Generalsection-->
         <section id="generalsection" translate="label" type="text" sortOrder="320" showInDefault="1"
             showInWebsite="1" showInStore="1">
             <label>General</label>
@@ -25,6 +25,27 @@
                 <field id="text_to_display" translate="label" type="text" sortOrder="20"
                     showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Text to Display</label>
+                </field>
+            </group>
+        </section>
+
+        <!-- User Story 16 -->
+        <!-- to create section ColorPicker-->
+        <section id="colorpicker" translate="label" type="text" sortOrder="320" showInDefault="1"
+            showInWebsite="1" showInStore="1">
+            <label>Color Picker</label>
+            <!-- Assign section to tab -->
+            <tab>mod9</tab>
+            <resource>Mod9_Colorpicker::configuration</resource>
+            <group id="color_picker_configuration" translate="label" type="text" sortOrder="5"
+                showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Color Picker</label>
+                <!-- create text type field -->
+                <field id="color_picker" translate="label" type="select" sortOrder="10"
+                    showInDefault="1"
+                    showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>UserStories\UserStoryNine\Model\Config\Source\ColorPicker</source_model>
                 </field>
             </group>
         </section>
