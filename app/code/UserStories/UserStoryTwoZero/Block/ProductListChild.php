@@ -38,6 +38,7 @@ class ProductListChild extends ListProduct
         );
     }
 
+    //using this Method in this example
     public function getLoadProductCollection()
     {
         $collection = $this->getLoadedProductCollection();

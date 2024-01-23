@@ -18,7 +18,7 @@ use Magento\Framework\App\Action\Action;
  */
 ?>
 <?php
-$_productCollection = $block->getLoadProductCollection();
+$_productCollection = $block->getLoadedProductCollection();
 /** @var \Magento\Catalog\Helper\Output $_helper */
 $_helper = $block->getData('outputHelper');
 ?>
@@ -99,7 +99,7 @@ $_helper = $block->getData('outputHelper');
                                                                                                                                             ?>">
                                     <?= $block->getBlockHtml('formkey') ?>
 
-                                    <?php $buttonTitle = $block->salableIs($_product) == true ? 'Add To Availability' : 'Call by Cart'   ?>
+                                    <?php $buttonTitle = $_product->getSalableQty() < 10000 ? 'Call To Availability' : 'Add to Cart'   ?>
                                     <button type="submit" title="<?= $escaper->escapeHtmlAttr(__($buttonTitle)) ?>"
                                         class="action tocart primary" disabled>
                                         <span><?= $escaper->escapeHtml(__($buttonTitle)) ?></span>
