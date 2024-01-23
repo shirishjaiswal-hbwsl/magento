@@ -99,9 +99,15 @@ $_helper = $block->getData('outputHelper');
                                                                                                                                             ?>">
                                     <?= $block->getBlockHtml('formkey') ?>
 
-                                    <?php $buttonTitle = $_product->getSalableQty() < 10000 ? 'Call To Availability' : 'Add to Cart'   ?>
+                                    <?php
+                                        $buttonTitle = $_product->getSalableQty() < 10000 ? 'Call To Availability' : 'Add to Cart';
+                                        $buttonUrl = $_product->getSalableQty() < 10000 ? 'http://shirishjaiswal.com/contact/' : 'javascript:void(0);';
+                                        $buttonClass = $_product->getSalableQty() < 10000 ? 'active' : 'disabled';
+                                        ?>
+
                                     <button type="submit" title="<?= $escaper->escapeHtmlAttr(__($buttonTitle)) ?>"
-                                        class="action tocart primary" disabled>
+                                        class="action tocart primary <?= $buttonClass ?>"
+                                        <?= $_product->getSalableQty() < 10000 ? 'onclick="window.location.href=' . "'" . $buttonUrl . "'" . '"' : ''; ?>>
                                         <span><?= $escaper->escapeHtml(__($buttonTitle)) ?></span>
                                     </button>
 
